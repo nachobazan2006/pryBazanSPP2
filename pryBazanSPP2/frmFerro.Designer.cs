@@ -39,6 +39,7 @@
             lblPrecio = new Label();
             btnCalcular = new Button();
             btnLimpiar = new Button();
+            label1 = new Label();
             gbInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NupDias).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NupDistancia).BeginInit();
@@ -61,6 +62,7 @@
             gbInformacion.Controls.Add(NupDistancia);
             gbInformacion.Controls.Add(lblDias);
             gbInformacion.Controls.Add(lblDistancia);
+            gbInformacion.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             gbInformacion.Location = new Point(72, 126);
             gbInformacion.Name = "gbInformacion";
             gbInformacion.Size = new Size(458, 274);
@@ -74,7 +76,7 @@
             NupDias.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
             NupDias.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             NupDias.Name = "NupDias";
-            NupDias.Size = new Size(120, 23);
+            NupDias.Size = new Size(120, 25);
             NupDias.TabIndex = 3;
             NupDias.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -84,7 +86,7 @@
             NupDistancia.Location = new Point(265, 71);
             NupDistancia.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             NupDistancia.Name = "NupDistancia";
-            NupDistancia.Size = new Size(120, 23);
+            NupDistancia.Size = new Size(120, 25);
             NupDistancia.TabIndex = 2;
             NupDistancia.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -112,6 +114,7 @@
             // 
             gpRespuestras.Controls.Add(lstResultado);
             gpRespuestras.Controls.Add(lblPrecio);
+            gpRespuestras.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             gpRespuestras.Location = new Point(610, 126);
             gpRespuestras.Name = "gpRespuestras";
             gpRespuestras.Size = new Size(453, 274);
@@ -122,10 +125,10 @@
             // lstResultado
             // 
             lstResultado.FormattingEnabled = true;
-            lstResultado.ItemHeight = 15;
+            lstResultado.ItemHeight = 17;
             lstResultado.Location = new Point(32, 121);
             lstResultado.Name = "lstResultado";
-            lstResultado.Size = new Size(278, 94);
+            lstResultado.Size = new Size(278, 89);
             lstResultado.TabIndex = 1;
             // 
             // lblPrecio
@@ -159,12 +162,23 @@
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(296, 496);
+            label1.Name = "label1";
+            label1.Size = new Size(571, 50);
+            label1.TabIndex = 5;
+            label1.Text = "\"La mejor opcion para tus viajes\"";
+            // 
             // frmBoleteria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            ClientSize = new Size(1125, 533);
+            ClientSize = new Size(1125, 581);
+            Controls.Add(label1);
             Controls.Add(btnLimpiar);
             Controls.Add(btnCalcular);
             Controls.Add(gpRespuestras);
@@ -195,5 +209,6 @@
         private ListBox lstResultado;
         private Button btnCalcular;
         private Button btnLimpiar;
+        private Label label1;
     }
 }
