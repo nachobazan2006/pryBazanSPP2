@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoleteria));
             lblTitulo = new Label();
             gbInformacion = new GroupBox();
             NupDias = new NumericUpDown();
@@ -184,6 +185,7 @@
             Controls.Add(gpRespuestras);
             Controls.Add(gbInformacion);
             Controls.Add(lblTitulo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmBoleteria";
             Text = "Boleteria";
             gbInformacion.ResumeLayout(false);
